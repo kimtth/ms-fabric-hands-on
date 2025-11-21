@@ -1,0 +1,38 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "Parameterized Dataflow Gen2",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Country": {
+      "queryId": "d20d4246-8da0-40b1-9be1-44da15f29883",
+      "queryName": "Country",
+      "loadEnabled": false
+    },
+    "dimension_city": {
+      "queryId": "ae120a52-6416-4249-a763-5d5b779266ce",
+      "queryName": "dimension_city",
+      "loadEnabled": false
+    },
+    "dimension_city_DataDestination": {
+      "queryId": "e6fb5e4a-8bb6-4c37-ada2-7a0257a46632",
+      "queryName": "dimension_city_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "https://fabrictutorialdata.blob.core.windows.net/sampledata/",
+      "kind": "AzureBlobs",
+      "connectionId": "{\"ClusterId\":\"ed33435e-c9ac-4a96-9a76-2c774e23310c\",\"DatasourceId\":\"044b4ffb-3c4f-4633-969f-5716a63ddefd\"}"
+    },
+    {
+      "path": "Lakehouse",
+      "kind": "Lakehouse",
+      "connectionId": "{\"ClusterId\":\"ed33435e-c9ac-4a96-9a76-2c774e23310c\",\"DatasourceId\":\"61dfdec4-3c23-47dd-aeda-76be086590cd\"}"
+    }
+  ],
+  "parametric": true
+}

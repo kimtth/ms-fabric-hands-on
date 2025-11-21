@@ -1,0 +1,78 @@
+{
+  "properties": {
+    "jobMode": "Batch",
+    "source": {
+      "type": "Parquet",
+      "connectionSettings": {
+        "type": "AzureBlobStorage",
+        "typeProperties": {
+          "containerUri": "https://azureopendatastorage.blob.core.windows.net/holidaydatacontainer"
+        }
+      }
+    },
+    "destination": {
+      "type": "Parquet",
+      "connectionSettings": {
+        "type": "Lakehouse",
+        "typeProperties": {
+          "workspaceId": "00000000-0000-0000-0000-000000000000",
+          "artifactId": "5011efa6-7196-9cbf-4b71-a36601cd0ac8",
+          "rootFolder": "Files"
+        },
+        "externalReferences": {
+          "connection": "61dfdec4-3c23-47dd-aeda-76be086590cd"
+        }
+      }
+    },
+    "policy": {
+      "timeout": "0.12:00:00"
+    }
+  },
+  "activities": [
+    {
+      "id": "82fe3a62-29f0-45ae-9d92-8c95c3110364",
+      "properties": {
+        "source": {
+          "datasetSettings": {
+            "location": {
+              "type": "AzureBlobStorageLocation",
+              "folderPath": "Processed",
+              "container": "holidaydatacontainer"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {
+            "recursive": false,
+            "wildcardFileName": "*.parquet"
+          }
+        },
+        "destination": {
+          "datasetSettings": {
+            "location": {
+              "type": "LakehouseLocation",
+              "fileName": "copyjob_publicholiday",
+              "folderPath": "public-holiday"
+            },
+            "compressionCodec": "snappy"
+          },
+          "storeSettings": {
+            "copyBehavior": "MergeFiles"
+          },
+          "formatSettings": {
+            "enableVertiParquet": false
+          }
+        },
+        "enableStaging": false,
+        "translator": {
+          "type": "TabularTranslator"
+        },
+        "typeConversionSettings": {
+          "typeConversion": {
+            "allowDataTruncation": true,
+            "treatBooleanAsNumber": false
+          }
+        }
+      }
+    }
+  ]
+}

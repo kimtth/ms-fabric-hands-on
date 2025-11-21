@@ -1,0 +1,67 @@
+{
+  "formatVersion": "202502",
+  "computeEngineSettings": {},
+  "name": "Import Power Query Template - SCD Type2",
+  "queryGroups": [],
+  "documentLocale": "en-US",
+  "queriesMetadata": {
+    "Dimension": {
+      "queryId": "a8b0c3af-8192-4cf5-9e61-031908c5c251",
+      "queryName": "Dimension",
+      "loadEnabled": false
+    },
+    "SourceTable": {
+      "queryId": "943fb3ac-8863-4b4e-89a1-17b3193f2476",
+      "queryName": "SourceTable",
+      "loadEnabled": false
+    },
+    "AggregatedDimHash": {
+      "queryId": "92dd7972-26a2-4f58-bf4e-0ec43c8baefb",
+      "queryName": "AggregatedDimHash",
+      "loadEnabled": false
+    },
+    "CompareStoM": {
+      "queryId": "496a9537-b6f8-48dc-8704-0d52ab578da6",
+      "queryName": "CompareStoM",
+      "loadEnabled": false
+    },
+    "LastID": {
+      "queryId": "aa6b9da2-b41b-4d54-8ec2-37aadd54ba55",
+      "queryName": "LastID",
+      "loadEnabled": false
+    },
+    "NewRecords": {
+      "queryId": "c8b31a9c-adbb-4761-bab1-a630bafea7b9",
+      "queryName": "NewRecords",
+      "loadEnabled": false
+    },
+    "RecordsToUpdate": {
+      "queryId": "d211a05e-4478-4786-a71a-dcf8807f6d80",
+      "queryName": "RecordsToUpdate",
+      "loadEnabled": false
+    },
+    "StagingTableForUpdates": {
+      "queryId": "4f98ce9c-49ad-4444-8179-b5518c8af0f9",
+      "queryName": "StagingTableForUpdates",
+      "loadEnabled": false
+    },
+    "Full Load": {
+      "queryId": "5b7a676e-2029-42ff-84ce-42e55cc91892",
+      "queryName": "Full Load",
+      "loadEnabled": false
+    },
+    "Full Load_DataDestination": {
+      "queryId": "0b474f8b-ea93-4500-acc5-af8694ca906c",
+      "queryName": "Full Load_DataDestination",
+      "isHidden": true,
+      "loadEnabled": false
+    }
+  },
+  "connections": [
+    {
+      "path": "FabricSql",
+      "kind": "FabricSql",
+      "connectionId": "{\"ClusterId\":\"ed33435e-c9ac-4a96-9a76-2c774e23310c\",\"DatasourceId\":\"fa3a68cc-994e-4dea-ad7a-5b46e4edcc53\"}"
+    }
+  ]
+}

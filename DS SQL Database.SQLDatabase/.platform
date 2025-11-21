@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SQLDatabase",
+    "displayName": "DS SQL Database"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "f709434c-374c-b2e0-4e81-d39a3d2c7091"
+  }
+}
