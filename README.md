@@ -1,14 +1,17 @@
 # Microsoft Fabric Hands-On
 
-Sample project demonstrating Microsoft Fabric capabilities. Use the [Github Integration](https://learn.microsoft.com/en-us/fabric/cicd/git-integration/intro-to-git-integration) feature to import the data into your workspace.
+Sample project demonstrating Microsoft Fabric capabilities. Import this repository using the [Github Integration](https://learn.microsoft.com/en-us/fabric/cicd/git-integration/intro-to-git-integration) feature to load the data into your workspace.
 
 ## Contents
 
-- **AI/ML**: Book recommendation, sales forecasting, time series analysis
+- **AI/ML**: Book recommendation, sales forecasting, time series analysis, exploratory data analysis
 - **ML Models**: ALS recommendation, SARIMAX forecasting
-- **Data Engineering**: Copy jobs, SCD Type 2 dataflows, parameterized pipelines
-- **Data**: Lakehouse, SQL Database
-- **Power BI**: Sample reports
+- **Data Engineering**: Copy jobs, SCD Type 2 dataflows, parameterized dataflows
+- **Data Storage**: Lakehouses, SQL Database, Eventhouse
+- **Ontology**: Retail sales ontology with entity/relationship types
+- **Power BI**: Sample reports and semantic models
+
+![task_flow](task_flow.png)
 
 ## Resources
 
@@ -18,6 +21,10 @@ Sample project demonstrating Microsoft Fabric capabilities. Use the [Github Inte
 - [Fabric Samples](https://github.com/microsoft/fabric-samples)
     - [IQ Samples](https://github.com/microsoft/fabric-samples/tree/main/docs-samples/iq)
     - [Ontology Tutorial](https://learn.microsoft.com/en-us/fabric/iq/ontology/tutorial-0-introduction)
+    - Ontology query: Fabric may use **Cypher**, the graph-query language used by Neo4j, Memgraph, and other property-graph databases.
+        ```cypher
+        MATCH (node_Store:Store)-[edge1_has:has]->(node_SaleEvent:SaleEvent) RETURN TO_JSON_STRING(node_Store) AS Store, TO_JSON_STRING(edge1_has) AS edge_1_has, TO_JSON_STRING(node_SaleEvent) AS SaleEvent LIMIT 1000
+        ```
 - Power BI: DAX, MDX  → XMLA | TOM / [TMDL (Tabular Model Definition Language)](https://learn.microsoft.com/en-us/analysis-services/tmdl/tmdl-overview) → TMSL → XMLA
 ```mermaid
 flowchart TB
