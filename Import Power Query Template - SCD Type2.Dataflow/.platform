@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Dataflow",
+    "displayName": "Import Power Query Template - SCD Type2"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "cd3f7024-4bae-8885-4113-6ef992b10fc3"
+  }
+}

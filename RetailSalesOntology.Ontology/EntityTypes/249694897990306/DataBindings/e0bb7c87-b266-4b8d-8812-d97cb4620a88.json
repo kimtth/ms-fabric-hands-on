@@ -1,0 +1,36 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/ontology/dataBinding/1.0.0/schema.json",
+  "id": "e0bb7c87-b266-4b8d-8812-d97cb4620a88",
+  "dataBindingConfiguration": {
+    "dataBindingType": "NonTimeSeries",
+    "propertyBindings": [
+      {
+        "sourceColumnName": "Date",
+        "targetPropertyId": "129132594553494076"
+      },
+      {
+        "sourceColumnName": "StoreId",
+        "targetPropertyId": "129132596219394922"
+      },
+      {
+        "sourceColumnName": "ProductId",
+        "targetPropertyId": "129132595306719154"
+      },
+      {
+        "sourceColumnName": "Units",
+        "targetPropertyId": "129132598138662145"
+      },
+      {
+        "sourceColumnName": "RevenueUSD",
+        "targetPropertyId": "129132598211907068"
+      }
+    ],
+    "sourceTableProperties": {
+      "sourceType": "LakehouseTable",
+      "workspaceId": "00000000-0000-0000-0000-000000000000",
+      "itemId": "c62e98cd-1fbc-9ac2-4682-e37446cba4ab",
+      "sourceTableName": "factsales",
+      "sourceSchema": null
+    }
+  }
+}
